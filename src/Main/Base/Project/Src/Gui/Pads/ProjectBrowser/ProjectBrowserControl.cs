@@ -140,6 +140,7 @@ namespace ICSharpCode.SharpDevelop.Project
 			if (e.ProjectItem is ReferenceProjectItem)  {
 				CallVisitor(new UpdateReferencesVisitor(e));
 			}
+			SelectFile(e.ProjectItem.FileName);
 		}
 		
 		void FileServiceFileRemoved(object sender, FileEventArgs e)
